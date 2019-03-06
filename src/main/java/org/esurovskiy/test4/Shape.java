@@ -1,6 +1,6 @@
 package org.esurovskiy.test4;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable {
     private String shapeColor;
 
     public Shape(String color) {
@@ -18,4 +18,7 @@ public abstract class Shape {
 
     public abstract double calcArea();
 
+    public void draw() {
+        System.out.println(toString());
+    }
 }

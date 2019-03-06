@@ -1,20 +1,30 @@
 package org.esurovskiy.test4;
 
-/**
- * TODO: write javadoc
- *
- * @author Evgeniy Surovskiy
- */
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Comparable {
+    private int speed;
+
+    public Car(final int speed) {
+        this.speed = speed;
+    }
+
     void doSomething() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "speed=" + speed +
+                '}';
     }
 
     int getCount() {
         return 5;
     }
-//    @Override
-//    void move() {
-//        System.out.println("Car move");
-//    }
+
+    public int compareTo(final Object o) {
+        Car that = (Car) o;
+        return this.speed-that.speed;
+
+    }
 }

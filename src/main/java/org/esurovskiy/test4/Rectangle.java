@@ -1,5 +1,10 @@
 package org.esurovskiy.test4;
 
+/**
+ * TODO: write javadoc
+ *
+ * @author Evgeniy Surovskiy
+ */
 public class Rectangle extends Shape {
     private double width;
     private double height;
@@ -17,6 +22,14 @@ public class Rectangle extends Shape {
 
     public void setHeight(final double height) {
         this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "This is Reactangle, color: " + getShapeColor()
+                + ", width=" + width
+                +", height " + height +
+                "\nShape area is: " + calcArea();
     }
 
     @Override
