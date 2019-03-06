@@ -1,6 +1,6 @@
 package org.esurovskiy.test4;
 
-public abstract class Shape implements Drawable {
+public abstract class Shape implements Drawable, Comparable {
     private String shapeColor;
 
     public Shape(String color) {
@@ -20,5 +20,10 @@ public abstract class Shape implements Drawable {
 
     public void draw() {
         System.out.println(toString());
+    }
+
+    public int compareTo(final Object o) {
+        Shape that = (Shape) o;
+        return Double.compare(this.calcArea(), that.calcArea());
     }
 }
