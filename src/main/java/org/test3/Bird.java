@@ -1,10 +1,12 @@
 package org.test3;
 
-public class Bird {
+import org.esurovskiy.test4.Movable;
+
+public class Bird implements Movable, Singer {
     protected final String name;
     protected int color;
     protected int hz;
-private int k;
+    private int k;
 
     public Bird(final String name) {
         this.name = name;
@@ -30,5 +32,13 @@ private int k;
 
     public void walk() {
         System.out.println("I'm walking");
+    }
+
+    public void move() {
+        System.out.println("Bird move");
+    }
+
+    public void sing() {
+        System.out.println("Bird sing");
     }
 }

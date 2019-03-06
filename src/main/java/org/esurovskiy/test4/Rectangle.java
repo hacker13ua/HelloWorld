@@ -1,10 +1,5 @@
 package org.esurovskiy.test4;
 
-/**
- * TODO: write javadoc
- *
- * @author Evgeniy Surovskiy
- */
 public class Rectangle extends Shape {
     private double width;
     private double height;

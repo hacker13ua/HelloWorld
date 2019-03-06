@@ -5,8 +5,8 @@ package org.esurovskiy.test4;
  *
  * @author Evgeniy Surovskiy
  */
-public abstract class Vehicle {
-    void move() {
+public abstract class Vehicle implements Movable {
+    public void move() {
         for (int i = 0; i < getCount(); i++) {
             System.out.println("Vehicle move.");
         }
